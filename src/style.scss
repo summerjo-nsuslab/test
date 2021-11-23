@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+input[type="text"] {
+  width: 85%;
+}
+button {
+  width: 10%;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+#todoWrap {
+  width: 800px;
+  padding: 5% 7.5%;
+  margin: 5% auto;
+  border: 1px solid #000;
+}
+
+#todoHead {
+  > div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+#todoBody {
+  margin-top: 10%;
+}
+
+#todoList {
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    + li {
+      margin-top: 2%;
+    }
+  }
+  input[type="text"] {
+    width: 75%;
+
+    &:disabled {
+      background-color: transparent;
+      border: none;
+    }
+  }
+  input:checked + input[type="text"] {
+    text-decoration: line-through;
+  }
+}
+
